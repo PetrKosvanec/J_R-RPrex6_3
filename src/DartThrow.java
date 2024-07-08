@@ -38,31 +38,21 @@ public class DartThrow extends ConsoleProgram {
      * @param y_ vertical coordinate of this dart throw
       */
     public DartThrow(double x_, double y_) {
-        println("instantiating");
         x = x_;
         y = y_;
-        if(x * x + y*y < 1) {
-            // inCircleCounter++;
+        if(x * x + y * y < 1) {
             inCircleCounter++;
         }
     }
 
+    /**
+     * Gets the number of darts that fell inside the target circle,
+     *   which is a class variable.
+     * @return number of darts that fell inside the target circle
+     */
     public int getInCircleCounter() {
         return inCircleCounter;
     }
-
-    /**
-     * Returns whether this DartThrow falls within the circle.
-     * @return whether this DartThrow falls within the circle
-     */
-//    public boolean isInCircle() {
-//        if ( x * x + y * y < 1 ) {
-//            return true;
-//        }
-//        else {
-//            return false;
-//        }
-//    }
 
     /* class variables */
     private static int inCircleCounter;

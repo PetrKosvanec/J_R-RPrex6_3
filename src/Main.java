@@ -22,8 +22,8 @@ public class Main extends ConsoleProgram {   //ConsoleProgram {
         }
     }
 
-    /* Named constants e.g. class variables*/
-    private static final int N_TRIALS = 1000;//000;
+    /* Named constants */
+    private static final int N_TRIALS = 10000;
 
     /* instance variables */
     private RandomGenerator rg = RandomGenerator.getInstance();
