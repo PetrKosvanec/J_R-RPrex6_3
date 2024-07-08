@@ -48,7 +48,7 @@ public class DartThrow extends ConsoleProgram {
     /**
      * Gets the number of darts that fell inside the target circle,
      *   which is a class variable.
-     * @return number of darts that fell inside the target circle
+     * @return The number of darts that fell inside the target circle
      */
     public int getInCircleCounter() {
         return inCircleCounter;
