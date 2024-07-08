@@ -8,24 +8,22 @@ public class Main extends ConsoleProgram {   //ConsoleProgram {
     }
 
     public void run() {
-        int nInCircle = 0;
-
         for (int i = 0; i < N_TRIALS; i++) {
-            DartThrow dt_i = new DartThrow(
+            DartThrow dt = new DartThrow(
                     rg.nextDouble(-1.0, 1.0),
                     rg.nextDouble(-1.0, 1.0)
             );
-            if ( dt_i.isInCircle() ) {
-                nInCircle++;
+            if ( i == (N_TRIALS - 1) ) {
+                println("PI - 3.14 - expected:\n" +
+                        "4 * ( number of darts in circle / N_TRIALS) =\n" +
+                        "4 * ( " + dt.getInCircleCounter() + " / " + N_TRIALS + " ) =\n" +
+                        4 * ( (dt.getInCircleCounter() * 1.0) / (N_TRIALS * 1.0) ));
             }
         }
-        println("nInCircle = " + nInCircle + "\n" + "N_TRIALS = " + N_TRIALS);
-        println("PI expected: 4 * ( (nInCircle * 1.0) / (N_TRIALS * 1.0) = " +
-                4 * ( (nInCircle * 1.0) / (N_TRIALS * 1.0) ));
     }
 
     /* Named constants e.g. class variables*/
-    private static final int N_TRIALS = 10000;
+    private static final int N_TRIALS = 1000;//000;
 
     /* instance variables */
     private RandomGenerator rg = RandomGenerator.getInstance();
